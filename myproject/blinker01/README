@@ -1,0 +1,12 @@
+
+See the previous level README for schematic and programmers reference
+information.
+
+At the moment this code assumes that you have the stock firmware that
+came with the board loaded.  At some point I will wipe mine and then
+likely have to init the gpio before using it...
+
+I dont have the flashing figured out yet, just jtag via openocd to sram
+so the sram version is here, see top level readme for loading and
+running.
+
