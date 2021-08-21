@@ -14,7 +14,7 @@ _start:
 hang:   b .
 ;@-----------------------
 .align
-stacktop: .word 0x20001000
+stacktop: .word 0x20010000
 ;@-----------------------
 .thumb_func
 .globl PUT8

@@ -1,0 +1,11 @@
+
+See the previous level README for schematic and programmers reference
+information.
+
+So far this code works with the stock code that comes with the board.
+
+A power cycle or reset causes the bsl to start, not sure if that is
+good or bad.
+
+
+

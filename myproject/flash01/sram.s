@@ -3,36 +3,18 @@
 .cpu cortex-m4
 .thumb
 ;@-----------------------
-
 .thumb_func
 .global _start
 _start:
-stacktop: .word 0x20010000
-.word reset
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-.word hang
-
-.thumb_func
-reset:
+    ldr r0,stacktop
+    mov sp,r0
     bl notmain
     b hang
 .thumb_func
 hang:   b .
 ;@-----------------------
 .align
-
+stacktop: .word 0x20001000
 ;@-----------------------
 .thumb_func
 .globl PUT8
@@ -50,6 +32,12 @@ GET8:
 .globl PUT16
 PUT16:
     strh r1,[r0]
+    bx lr
+;@-----------------------
+.thumb_func
+.globl GET16
+GET16:
+    ldrh r0,[r0]
     bx lr
 ;@-----------------------
 .thumb_func
